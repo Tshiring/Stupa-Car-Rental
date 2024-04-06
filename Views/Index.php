@@ -7,7 +7,7 @@
   <title>Stupa Car Rental</title>
   <base href="http://localhost/Car/">
 
-  <link rel="stylesheet" href="../public/styles/main.min.css">
+  <link rel="stylesheet" href="public/styles/main.min.css">
 </head>
 
 <body>
