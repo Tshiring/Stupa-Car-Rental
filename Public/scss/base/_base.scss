@@ -8,10 +8,17 @@
 }
 
 body {
+	overflow-x: hidden;
 	background-color: black;
 	* {
 		color: white;
 	}
+}
+
+img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 
 button {

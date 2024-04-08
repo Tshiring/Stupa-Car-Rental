@@ -12,7 +12,12 @@
 
 <body>
   <?php require './components/nav.php' ?>
-  <p>This is Home</p>
+  <section class="hero">
+    <div class="container">
+      <h1>Discover the world on wheels with our car rental service</h1>
+      <img src="public/images/hero.png" alt="">
+    </div>
+  </section>
 
   <script src="public/js/nav.js"></script>
 </body>

@@ -1,0 +1,15 @@
+.hero {
+  height: calc(100dvh - 61px);
+  position: relative;
+	h1 {
+		text-wrap: balance;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+	}
+  img{
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+}
