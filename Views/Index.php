@@ -12,7 +12,9 @@
 
 <body>
   <?php require './components/nav.php' ?>
-  This is Home
+  <p>This is Home</p>
+
+  <script src="public/js/nav.js"></script>
 </body>
 
 </html>

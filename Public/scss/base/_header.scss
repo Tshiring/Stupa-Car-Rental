@@ -1,8 +1,29 @@
 header {
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
-}
-
-body {
-	background-color: red;
+	.login-btn {
+		border: 1px solid white;
+		padding: 10px 20px;
+		border-radius: 20px;
+	}
+	.hamburger-menu {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		span {
+			display: block;
+			height: 5px;
+			width: 100%;
+			background-color: white;
+			border-radius: 5px;
+		}
+	}
+	nav {
+		background-color: gray;
+		padding: 10px;
+		border-radius: 10px;
+	}
 }
