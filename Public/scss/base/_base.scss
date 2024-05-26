@@ -69,3 +69,18 @@ input {
 	border-radius: 64px;
 	height: min-content;
 }
+
+input {
+	border-radius: 6px;
+	padding: 10px 15px;
+	&::placeholder {
+		color: gray;
+	}
+	&[type='submit'] {
+		background-color: $light-black;
+		color: #fff;
+		&:hover{
+			background-color: #000;
+		}
+	}
+}
