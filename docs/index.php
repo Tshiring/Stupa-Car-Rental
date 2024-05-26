@@ -14,6 +14,22 @@
 $date = date('Y-m-d');
 ?>
 
+<?php
+$cars = [
+    [
+        "name" => "Audi A8 L 2022",
+        "price" => "78.90",
+        "features" => [
+            ["icon" => "svg_path_1", "value" => "4000"],
+            ["icon" => "svg_path_2", "value" => "Auto"],
+            ["icon" => "svg_path_3", "value" => "4 Person"],
+            ["icon" => "svg_path_4", "value" => "Electric"]
+        ]
+    ],
+    
+];
+?>
+
 
 <body>
   <?php require './components/nav.php' ?>
@@ -160,7 +176,7 @@ $date = date('Y-m-d');
       <h1>Our Impressive Collection of Cars</h1>
       <p>Ranging from elegant sedans to powerful sports cars, all carefully selected to provide our customers with the ultimate driving experience.</p>
       <div class="car-collection-wrapper">
-        <div class="car-collection card">
+        <div class="car-collection-card">
           <img src="" alt="car">
           <p class="car-name">Audi A8 L 2022</p>
           <div>
