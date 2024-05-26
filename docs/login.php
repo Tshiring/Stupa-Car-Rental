@@ -41,18 +41,21 @@ if (isset($_SESSION["user"])) {
 	}
 	?>
 	<?php require './components/nav.php' ?>
-	<div class="auth-form">
-		<form action="docs/login.php" method="post">
-			<div class="form-group">
-				<label for="">Email</label>
-				<input type="email" name="email" id="">
-			</div>
-			<div class="form-group">
-				<label for="">Password</label>
-				<input type="password" name="password" id="">
-			</div>
-			<input type="submit" value="Login" name="login">
-		</form>
+	<div class="form-wrapper">
+		<div class="auth-form">
+			<h2>Login</h2>
+			<form action="docs/login.php" method="post">
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" autocomplete="off" placeholder="Enter your email">
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password" autocomplete="off" placeholder="Enter your password">
+				</div>
+				<input type="submit" value="Login" name="login">
+			</form>
+		</div>
 	</div>
 </body>
 
