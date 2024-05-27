@@ -4,7 +4,15 @@
 	font-family: 'Figtree', sans-serif;
 }
 
-
-h3{
+h3 {
 	font-size: 24px;
+}
+
+p,
+span,
+label,
+input {
+	font-size: 16px;
+	line-height: 22px;
+	color: initial;
 }
