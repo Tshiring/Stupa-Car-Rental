@@ -247,3 +247,21 @@
     }
   }
 }
+.how-it-works {
+  background-color: white;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+    color: #000;
+
+    h1,
+    h2,
+    p,
+    span,
+    .car-name,
+    .car-desc {
+      color: #000;
+    }
+  }
+}
