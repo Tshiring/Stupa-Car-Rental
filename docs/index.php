@@ -14,7 +14,30 @@
 $date = date('Y-m-d');
 ?>
 
-
+<?php
+// Example array of customer data
+$customers = array(
+    array(
+        "name" => "Lokman Hossain",
+        "location" => "Texas",
+        "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
+        "image" => "public/images/customer-img.png"
+    ),
+    array(
+        "name" => "Lokman Hossain",
+        "location" => "Texas",
+        "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
+        "image" => "public/images/customer-img.png"
+    ),
+    array(
+        "name" => "Lokman Hossain",
+        "location" => "Texas",
+        "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
+        "image" => "public/images/customer-img.png"
+    ),
+    // Add more customer data as needed
+);
+?>
 
 
 <body>
@@ -284,27 +307,29 @@ $date = date('Y-m-d');
     </div>
   </div>
   </section>
- <section class="customer">
+<section class="customer">
     <div class="customer-saying">
-      <h1>What Our Customers Say</h1>
-      <button>left</button>
-      <button>right</button>
+        <h1>What Our Customers Say</h1>
+        <div class="swipe-btns">
+            <button class="arrow-left"> <i data-feather="arrow-left"></i></button>
+            <button class="arrow-right"> <i data-feather="arrow-right"></i></button>
+        </div>
     </div>
-    <p>
-      “I was really impressed with the level of service
-       I received from this car rental company. The process was smooth and easy, 
-       and the car I rented was in excellent condition. The staff was friendly and helpful, 
-       and I felt well taken care of throughout my rental period. I would definitely recommend this 
-       company to anyone looking for a premium car rental experience.”
-    </p>
-    <div class="user">
-      <img src="" alt="">
-      <div class="user-name">
-        <h2>Lokman Hossain</h2>
-        <p>From<span>Texas</span></p>
-      </div>
+    <div class="customer-cards">
+        <?php foreach ($customers as $customer): ?>
+        <div class="customer-card">
+            <p><?= $customer['testimonial'] ?></p>
+            <div class="user">
+                <img src="<?= $customer['image'] ?>" alt="customer">
+                <div class="user-name">
+                    <h2><?= $customer['name'] ?></h2>
+                    <p>From <span><?= $customer['location'] ?></span></p>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
     </div>
- </section>
+</section>
   <section class="footer">
     <div class="logo">
       <h1>LuxeDrive</h1>
@@ -328,6 +353,30 @@ $date = date('Y-m-d');
   <script>
     feather.replace();
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const customerCards = document.querySelector('.customer-cards');
+        const arrowLeft = document.querySelector('.arrow-left');
+        const arrowRight = document.querySelector('.arrow-right');
+        const cardWidth = document.querySelector('.customer-card').offsetWidth;
+        let currentIndex = 0;
+
+        arrowLeft.addEventListener('click', function() {
+            currentIndex = Math.max(currentIndex - 1, 0);
+            updateSliderPosition();
+        });
+
+        arrowRight.addEventListener('click', function() {
+            currentIndex = Math.min(currentIndex + 1, customerCards.children.length - 1);
+            updateSliderPosition();
+        });
+
+        function updateSliderPosition() {
+            customerCards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+    });
+</script>
+
 </body>
 
 </html>

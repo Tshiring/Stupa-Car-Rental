@@ -335,7 +335,7 @@
         border-radius: 18px;
         position: absolute;
         left: 500px;
-        top:20px
+        top: 20px;
       }
 
       img {
@@ -347,18 +347,98 @@
     }
   }
 }
-.customer{
-  background-color: #F5F5F5;
-   max-width: 100%;
-   padding:120px 112px 120px 112px;
-    margin: auto;
-    h1,
-    h2,
-    p,
-    span {
-      color: #000;
+.customer {
+  background-color: #f5f5f5;
+  max-width: 100%;
+  padding: 120px 165px 120px 165px;
+  margin: auto;
+  h1,
+  h2,
+  p,
+  span {
+    color: #000;
+  }
+  .customer-saying {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 59px;
+
+    h1 {
+      font-size: 40px;
     }
-  
+
+    .swipe-btns {
+      display: flex;
+      color: black;
+      gap: 10px;
+      button {
+        display: flex;
+      }
+      .arrow-left {
+        border: 1px solid #c0c0c0;
+        cursor: pointer;
+        border-radius: 100%;
+        padding: 10px;
+        .feather {
+          stroke: black;
+          stroke-width: 2;
+        }
+      }
+      .arrow-right {
+        border: 1px solid #c0c0c0;
+        cursor: pointer;
+        background-color: black;
+        border-radius: 100%;
+        padding: 10px;
+      }
+    }
+  }
+  .customer-cards {
+    display: flex;
+    transition: transform 0.5s ease;
+    .customer-card {
+      flex: 0 0 auto;
+      width: 100%;
+      padding: 0 20px; 
+    }
+
+    p {
+      font-size: 32px;
+      color: #0f0f0f;
+      font-weight: 600;
+      padding-bottom: 64px;
+    }
+    .user {
+      display: flex;
+      gap: 20px;
+
+      width: fit-content;
+      height: 80px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      .user-name {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          font-size: 24px;
+        }
+        p {
+          color: #737373;
+          font-size: 20px;
+          font-weight: 400;
+        }
+        span {
+          color: #737373;
+          font-weight: 500;
+        }
+      }
+    }
+  }
 }
 .footer {
   background-color: black;
