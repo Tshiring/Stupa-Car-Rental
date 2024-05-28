@@ -284,30 +284,44 @@ $date = date('Y-m-d');
     </div>
   </div>
   </section>
+ <section class="customer">
+    <div class="customer-saying">
+      <h1>What Our Customers Say</h1>
+      <button>left</button>
+      <button>right</button>
+    </div>
+    <p>
+      “I was really impressed with the level of service
+       I received from this car rental company. The process was smooth and easy, 
+       and the car I rented was in excellent condition. The staff was friendly and helpful, 
+       and I felt well taken care of throughout my rental period. I would definitely recommend this 
+       company to anyone looking for a premium car rental experience.”
+    </p>
+    <div class="user">
+      <img src="" alt="">
+      <div class="user-name">
+        <h2>Lokman Hossain</h2>
+        <p>From<span>Texas</span></p>
+      </div>
+    </div>
+ </section>
   <section class="footer">
-<div class="logo">
-<h1>LuxeDrive</h1>
-</div>
-<div class="items">
-<ul>
-  <li>
-    Rent
-  </li>
-  <li>
-    Share
-  </li>
-  <li>
-    About us
-  </li>
-  <li>
-    Contact
-  </li>
-</ul>
-</div>
-<dl class="socialmedia">
-<i data-feather="instagram"></i>
-</dl>
-  </section>
+    <div class="logo">
+      <h1>LuxeDrive</h1>
+     </div>
+    <div class="items">
+      <p>Rent</p>
+      <p>Share</p>
+      <p>About us</p>
+      <p>Contact</p>
+    </div>
+    <div class="socialmedia">
+      <i data-feather="instagram"></i>
+      <i data-feather="twitter"></i>
+      <i data-feather="facebook"></i>
+      <i data-feather="youtube"></i>
+    </div>
+ </section>
   <script src="public/js/nav.js">
 
   </script>
