@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stupa Car Rental</title>
   <base href="http://localhost/Car/">
-
+<script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="public/styles/main.min.css">
 </head>
 
@@ -284,7 +284,36 @@ $date = date('Y-m-d');
     </div>
   </div>
   </section>
-  <script src="public/js/nav.js"></script>
+  <section class="footer">
+<div class="logo">
+<h1>LuxeDrive</h1>
+</div>
+<div class="items">
+<ul>
+  <li>
+    Rent
+  </li>
+  <li>
+    Share
+  </li>
+  <li>
+    About us
+  </li>
+  <li>
+    Contact
+  </li>
+</ul>
+</div>
+<dl class="socialmedia">
+<i data-feather="instagram"></i>
+</dl>
+  </section>
+  <script src="public/js/nav.js">
+
+  </script>
+  <script>
+    feather.replace();
+  </script>
 </body>
 
 </html>
