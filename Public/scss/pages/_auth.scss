@@ -1,0 +1,32 @@
+.form-wrapper {
+	height: calc(100vh - 60px);
+	width: 100vw;
+	display: grid;
+	place-content: center;
+  .auth-form {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    h2{
+      color: $light-black;
+      margin-bottom: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .form-group {
+        label {
+          color: $light-black;
+          display: block;
+          margin-bottom: 5px;
+        }
+        input {
+          color: $light-black;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

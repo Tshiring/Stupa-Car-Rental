@@ -13,8 +13,8 @@
   </nav>
   <h1>LOGO</h1>
   <div class="login-btn">
-    <a href="views/Login.php">Login </a>
-    <a href="views/Register.php"> / Register</a>
+    <a href="docs/Login.php">Login </a>
+    <a href="docs/Register.php"> / Register</a>
   </div>
 
 </header>
