@@ -5,17 +5,7 @@ if (isset($_SESSION["user"])) {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stupa Car Rental</title>
-  <base href="http://localhost/Car/">
-
-  <link rel="stylesheet" href="public/styles/main.min.css">
-</head>
+<?php require '../components/head.php' ?>
 
 <body>
   <?php require './components/nav.php' ?>
@@ -67,7 +57,6 @@ if (isset($_SESSION["user"])) {
     }
   }
   ?>
-
 
   <div class="auth-form">
     <form action="docs/register.php" method="POST">

@@ -10,20 +10,9 @@ if (!isset($_SESSION["user"])) {
 
 <body>
     <div class="container">
-        <div class="sidebar">
-            <h2>Dashboard</h2>
-            <ul>
-                <li><a href="#add-car">Add Car</a></li>
-                <li><a href="#available-cars">Available Cars</a></li>
-                <li><a href="#rental-records">Rental Records</a></li>
-                <li>
-                    <a href="docs/logout.php">Logout</a>
-                </li>
-            </ul>
-        </div>
+        <?php require './sidebar.php' ?>
         <div class="main-content">
-            <h1>Car Rental Dashboard</h1>
-
+            <h1>Add Car</h1>
             <div id="add-car" class="car-form">
                 <h2>Add a New Car</h2>
                 <form id="car-form">
@@ -51,7 +40,6 @@ if (!isset($_SESSION["user"])) {
                     <button type="submit">Add Car</button>
                 </form>
             </div>
-
         </div>
     </div>
 
