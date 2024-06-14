@@ -1,0 +1,124 @@
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+
+    h2 {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 15px;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                display: block;
+                padding: 10px;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #575757;
+                }
+            }
+        }
+    }
+}
+
+.main-content {
+    margin-left: 220px; // width of sidebar + some gap
+    padding: 20px;
+    width: calc(100% - 220px);
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+}
+
+.car-form {
+    margin-bottom: 40px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+
+            &:hover {
+                background-color: #218838;
+            }
+        }
+    }
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    .car-item {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        p {
+            color: #777;
+        }
+
+        .car-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10px;
+
+            span {
+                flex: 1 1 45%;
+                margin: 5px 0;
+            }
+        }
+    }
+}
