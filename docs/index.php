@@ -7,28 +7,27 @@ $date = date('Y-m-d');
 <?php
 // Example array of customer data
 $customers = array(
-    array(
-        "name" => "Lokman Hossain",
-        "location" => "Texas",
-        "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
-        "image" => "public/images/customer-img.png"
-    ),
-    array(
-        "name" => "Lokman Hossain",
-        "location" => "Texas",
-        "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
-        "image" => "public/images/customer-img.png"
-    ),
-    array(
-        "name" => "Lokman Hossain",
-        "location" => "Texas",
-        "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
-        "image" => "public/images/customer-img.png"
-    ),
-    // Add more customer data as needed
+  array(
+    "name" => "Lokman Hossain",
+    "location" => "Texas",
+    "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
+    "image" => "public/images/customer-img.png"
+  ),
+  array(
+    "name" => "Lokman Hossain",
+    "location" => "Texas",
+    "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
+    "image" => "public/images/customer-img.png"
+  ),
+  array(
+    "name" => "Lokman Hossain",
+    "location" => "Texas",
+    "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
+    "image" => "public/images/customer-img.png"
+  ),
+  // Add more customer data as needed
 );
 ?>
-
 
 <body>
   <?php require './components/nav.php' ?>
@@ -177,9 +176,9 @@ $customers = array(
         <p>Ranging from elegant sedans to powerful sports cars, all carefully selected to provide our customers with the ultimate driving experience.</p>
       </div>
       <div class="car-collection-wrapper">
-       <?php
-       for ($x = 0; $x <= 5; $x++) {
-      echo  '<div class="car-collection-card">
+        <?php
+        for ($x = 0; $x <= 5; $x++) {
+          echo  '<div class="car-collection-card">
          <img src="public/images/hero.png" alt="car">
          <div class="car-name-desc">
 
@@ -234,96 +233,96 @@ $customers = array(
            <button>Rent Now</button>
          </div>
        </div>';
-       }
-       ?>
-       
+        }
+        ?>
+
       </div>
       <div class="see-all-btn">
         <button>See all Cars</button>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 8H15M15 8L8 15M15 8L8 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1 8H15M15 8L8 15M15 8L8 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
 
       </div>
     </div>
   </section>
-<section class="how-it-works">
-  <div class="container">
-    <div class="heading">
-      <h1>How it works</h1>
-      <p>Renting a luxury car has never been easier. Our streamlined process makes it simple 
-        for you to book and confirm your vehicle of choice online</p>
+  <section class="how-it-works">
+    <div class="container">
+      <div class="heading">
+        <h1>How it works</h1>
+        <p>Renting a luxury car has never been easier. Our streamlined process makes it simple
+          for you to book and confirm your vehicle of choice online</p>
+      </div>
+      <div class="content-hero">
+        <div class="content">
+          <div class="browse">
+            <div class="icons">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 21L17.5001 17.5M20 11.5C20 16.1944 16.1944 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3C16.1944 3 20 6.80558 20 11.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="heads">
+              <h2>Browse and select</h2>
+              <p>Choose from our wide range of premium cars, select the pickup and return dates and locations that suit you best.</p>
+            </div>
+          </div>
+          <div class="book">
+            <div class="icons">
+              <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 9H1M19 11.5V7.8C19 6.11984 19 5.27976 18.673 4.63803C18.3854 4.07354 17.9265 3.6146 17.362 3.32698C16.7202 3 15.8802 3 14.2 3H5.8C4.11984 3 3.27976 3 2.63803 3.32698C2.07354 3.6146 1.6146 4.07354 1.32698 4.63803C1 5.27976 1 6.11984 1 7.8V16.2C1 17.8802 1 18.7202 1.32698 19.362C1.6146 19.9265 2.07354 20.3854 2.63803 20.673C3.27976 21 4.11984 21 5.8 21H10M14 1V5M6 1V5M12.5 18L14.5 20L19 15.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="heads">
+              <h2>Book and confirm</h2>
+              <p>Book your desired car with just a few clicks and receive an instant confirmation via email or SMS.</p>
+            </div>
+          </div>
+          <div class="ride">
+            <div class="icons">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 8H14.01M8 8H8.01M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11ZM14.5 8C14.5 8.27614 14.2761 8.5 14 8.5C13.7239 8.5 13.5 8.27614 13.5 8C13.5 7.72386 13.7239 7.5 14 7.5C14.2761 7.5 14.5 7.72386 14.5 8ZM8.5 8C8.5 8.27614 8.27614 8.5 8 8.5C7.72386 8.5 7.5 8.27614 7.5 8C7.5 7.72386 7.72386 7.5 8 7.5C8.27614 7.5 8.5 7.72386 8.5 8ZM11 16.5C13.5005 16.5 15.5 14.667 15.5 13H6.5C6.5 14.667 8.4995 16.5 11 16.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="heads">
+              <h2>Enjoy your ride</h2>
+              <p>Pick up your car at the designated location and enjoy your premium driving experience with our top-quality service.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero">
+          <img src="public/images/how-it-work-hero.png" alt="">
+
+        </div>
+      </div>
     </div>
-    <div class="content-hero">
-     <div class="content">
-        <div class="browse">
-          <div class="icons">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 21L17.5001 17.5M20 11.5C20 16.1944 16.1944 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3C16.1944 3 20 6.80558 20 11.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="heads">
-            <h2>Browse and select</h2>
-            <p>Choose from our wide range of premium cars, select the pickup and return dates and locations that suit you best.</p>
-          </div>
-        </div>
-        <div class="book">
-          <div class="icons">
-            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <path d="M19 9H1M19 11.5V7.8C19 6.11984 19 5.27976 18.673 4.63803C18.3854 4.07354 17.9265 3.6146 17.362 3.32698C16.7202 3 15.8802 3 14.2 3H5.8C4.11984 3 3.27976 3 2.63803 3.32698C2.07354 3.6146 1.6146 4.07354 1.32698 4.63803C1 5.27976 1 6.11984 1 7.8V16.2C1 17.8802 1 18.7202 1.32698 19.362C1.6146 19.9265 2.07354 20.3854 2.63803 20.673C3.27976 21 4.11984 21 5.8 21H10M14 1V5M6 1V5M12.5 18L14.5 20L19 15.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-         <div class="heads">
-           <h2>Book and confirm</h2>
-           <p>Book your desired car with just a few clicks and receive an instant confirmation via email or SMS.</p>
-         </div>
-        </div>
-        <div class="ride">
-          <div class="icons">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <path d="M14 8H14.01M8 8H8.01M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11ZM14.5 8C14.5 8.27614 14.2761 8.5 14 8.5C13.7239 8.5 13.5 8.27614 13.5 8C13.5 7.72386 13.7239 7.5 14 7.5C14.2761 7.5 14.5 7.72386 14.5 8ZM8.5 8C8.5 8.27614 8.27614 8.5 8 8.5C7.72386 8.5 7.5 8.27614 7.5 8C7.5 7.72386 7.72386 7.5 8 7.5C8.27614 7.5 8.5 7.72386 8.5 8ZM11 16.5C13.5005 16.5 15.5 14.667 15.5 13H6.5C6.5 14.667 8.4995 16.5 11 16.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-           </svg>
-          </div>
-        <div class="heads">
-          <h2>Enjoy your ride</h2>
-          <p>Pick up your car at the designated location and enjoy your premium driving experience with our top-quality service.</p>
-        </div>
-        </div>
-     </div>
-     <div class="hero">
-   <img src="public/images/how-it-work-hero.png" alt="">
-  
-     </div>
-    </div>
-  </div>
   </section>
-<section class="customer">
+  <section class="customer">
     <div class="customer-saying">
-        <h1>What Our Customers Say</h1>
-        <div class="swipe-btns">
-            <button class="arrow-left"> <i data-feather="arrow-left"></i></button>
-            <button class="arrow-right"> <i data-feather="arrow-right"></i></button>
-        </div>
+      <h1>What Our Customers Say</h1>
+      <div class="swipe-btns">
+        <button class="arrow-left"> <i data-feather="arrow-left"></i></button>
+        <button class="arrow-right"> <i data-feather="arrow-right"></i></button>
+      </div>
     </div>
     <div class="customer-cards">
-        <?php foreach ($customers as $customer): ?>
+      <?php foreach ($customers as $customer) : ?>
         <div class="customer-card">
-            <p><?= $customer['testimonial'] ?></p>
-            <div class="user">
-                <img src="<?= $customer['image'] ?>" alt="customer">
-                <div class="user-name">
-                    <h2><?= $customer['name'] ?></h2>
-                    <p>From <span><?= $customer['location'] ?></span></p>
-                </div>
+          <p><?= $customer['testimonial'] ?></p>
+          <div class="user">
+            <img src="<?= $customer['image'] ?>" alt="customer">
+            <div class="user-name">
+              <h2><?= $customer['name'] ?></h2>
+              <p>From <span><?= $customer['location'] ?></span></p>
             </div>
+          </div>
         </div>
-        <?php endforeach; ?>
+      <?php endforeach; ?>
     </div>
-</section>
+  </section>
   <section class="footer">
     <div class="logo">
       <h1>LuxeDrive</h1>
-     </div>
+    </div>
     <div class="items">
       <p>Rent</p>
       <p>Share</p>
@@ -336,7 +335,7 @@ $customers = array(
       <i data-feather="facebook"></i>
       <i data-feather="youtube"></i>
     </div>
- </section>
+  </section>
   <script src="public/js/nav.js">
 
   </script>
@@ -345,28 +344,29 @@ $customers = array(
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const customerCards = document.querySelector('.customer-cards');
-        const arrowLeft = document.querySelector('.arrow-left');
-        const arrowRight = document.querySelector('.arrow-right');
-        const cardWidth = document.querySelector('.customer-card').offsetWidth;
-        let currentIndex = 0;
+      const customerCards = document.querySelector('.customer-cards');
+      const arrowLeft = document.querySelector('.arrow-left');
+      const arrowRight = document.querySelector('.arrow-right');
+      const cardWidth = document.querySelector('.customer-card').offsetWidth;
+      let currentIndex = 0;
 
-        arrowLeft.addEventListener('click', function() {
-            currentIndex = Math.max(currentIndex - 1, 0);
-            updateSliderPosition();
-        });
+      arrowLeft.addEventListener('click', function() {
+        currentIndex = Math.max(currentIndex - 1, 0);
+        updateSliderPosition();
+      });
 
-        arrowRight.addEventListener('click', function() {
-            currentIndex = Math.min(currentIndex + 1, customerCards.children.length - 1);
-            updateSliderPosition();
-        });
+      arrowRight.addEventListener('click', function() {
+        currentIndex = Math.min(currentIndex + 1, customerCards.children.length - 1);
+        updateSliderPosition();
+      });
 
-        function updateSliderPosition() {
-            customerCards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-        }
+      function updateSliderPosition() {
+        customerCards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      }
     });
-</script>
+  </script>
 
+  t
 </body>
 
 </html>

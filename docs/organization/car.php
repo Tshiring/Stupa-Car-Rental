@@ -23,19 +23,27 @@ if (!isset($_SESSION["user"])) {
                     <input type="text" id="car-name" name="car-name">
 
                     <label for="car-price">Price:</label>
-                    <input type="text" id="car-price" name="car-price">
+                    <input type="type" inputmode="numeric" id="car-price" name="car-price">
 
                     <label for="car-mileage">Mileage:</label>
-                    <input type="text" id="car-mileage" name="car-mileage">
+                    <input type="type" inputmode="numeric" id="car-mileage" name="car-mileage">
 
-                    <label for="car-transmission">Transmission:</label>
-                    <input type="text" id="car-transmission" name="car-transmission">
+                    <label for="vehicle-type">Transmission:</label>
+                    <select id="vehicle-type" name="vehicle-type">
+                        <option value="">Transmission</option>
+                        <option value="auto">Auto</option>
+                        <option value="manual">Manual</option>
+                    </select>
 
                     <label for="car-people">People Capacity:</label>
                     <input type="text" id="car-people" name="car-people">
 
-                    <label for="car-electric">Electric:</label>
-                    <input type="text" id="car-electric" name="car-electric">
+                    <label for="vehicle-type">Type of Vehicle:</label>
+                    <select id="vehicle-type" name="vehicle-type">
+                        <option value="">Type of Vehicle</option>
+                        <option value="electric">Electric</option>
+                        <option value="fuel">Fuel</option>
+                    </select>
 
                     <button type="submit">Add Car</button>
                 </form>

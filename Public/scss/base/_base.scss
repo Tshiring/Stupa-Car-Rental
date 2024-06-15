@@ -39,6 +39,7 @@ input {
 	border: 1px solid white;
 	outline: 1px solid gray;
 	background-color: #fff;
+	color: #000;
 	&:focus {
 		outline: 1px solid $light-black;
 	}
@@ -53,6 +54,12 @@ input {
 			background-color: #000;
 		}
 	}
+}
+
+select,
+option {
+	color: #000;
+	padding: 10px 5px;
 }
 
 .container {
