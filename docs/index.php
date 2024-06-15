@@ -1,4 +1,4 @@
-<?php require '../components/head.php' ?>
+<?php require './components/head.php' ?>
 
 <?php
 $date = date('Y-m-d');
