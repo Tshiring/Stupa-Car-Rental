@@ -9,7 +9,9 @@
 
 <body>
   <form action="charge.php" method="post">
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<?php echo getenv('STRIPE_PUBLISHABLE_KEY'); ?>" data-amount="999" data-name="Stupa Car Rental" data-description="Faster delivery" data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-currency="usd"> </script>
+    <p>Tshirt</p>
+    <p>US$ 20.20</p>
+    <button>Pay</button>
   </form>
 </body>
 
