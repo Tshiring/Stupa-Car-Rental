@@ -1,44 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stupa Car Rental</title>
-  <base href="http://localhost/Car/">
-<script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="public/styles/main.min.css">
-</head>
+<?php require './components/head.php' ?>
 
 <?php
 $date = date('Y-m-d');
 ?>
 
 <?php
+
 // Example array of customer data
 $customers = array(
-    array(
-        "name" => "Lokman Hossain",
-        "location" => "Texas",
-        "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
-        "image" => "public/images/customer-img.png"
-    ),
-    array(
-        "name" => "Lokman Hossain",
-        "location" => "Texas",
-        "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
-        "image" => "public/images/customer-img.png"
-    ),
-    array(
-        "name" => "Lokman Hossain",
-        "location" => "Texas",
-        "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
-        "image" => "public/images/customer-img.png"
-    ),
-    // Add more customer data as needed
+  array(
+    "name" => "Lokman Hossain",
+    "location" => "Texas",
+    "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
+    "image" => "public/images/customer-img.png"
+  ),
+  array(
+    "name" => "Lokman Hossain",
+    "location" => "Texas",
+    "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
+    "image" => "public/images/customer-img.png"
+  ),
+  array(
+    "name" => "Lokman Hossain",
+    "location" => "Texas",
+    "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
+    "image" => "public/images/customer-img.png"
+  ),
+  // Add more customer data as needed
 );
 ?>
-
 
 <body>
   <?php require './components/nav.php' ?>
@@ -187,153 +177,161 @@ $customers = array(
         <p>Ranging from elegant sedans to powerful sports cars, all carefully selected to provide our customers with the ultimate driving experience.</p>
       </div>
       <div class="car-collection-wrapper">
-       <?php
-       for ($x = 0; $x <= 5; $x++) {
-      echo  '<div class="car-collection-card">
-         <img src="public/images/hero.png" alt="car">
-         <div class="car-name-desc">
+        <?php
+        include("./database.php");
+        $sql = "SELECT * FROM cars";
+        $result = mysqli_query($conn, $sql);
 
-           <p class="car-name">Audi A8 L 2022</p>
-           <div class="car-price">
-             <h2>78.90</h2><span>/day</span>
-           </div>
-           <div class="car-desc">
-             <div class="car-infos">
-               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                 <g clip-path="url(#clip0_1_5117)">
-                   <path d="M10 1.66669V3.75002M10 1.66669C5.39765 1.66669 1.66669 5.39765 1.66669 10M10 1.66669C14.6024 1.66669 18.3334 5.39765 18.3334 10M10 16.25V18.3334M10 18.3334C14.6024 18.3334 18.3334 14.6024 18.3334 10M10 18.3334C5.39765 18.3334 1.66669 14.6024 1.66669 10M3.75002 10H1.66669M18.3334 10H16.25M15.8987 15.8987L14.4206 14.4206M4.10138 15.8987L5.58098 14.4191M4.10138 4.16669L5.54842 5.61373M15.8987 4.16669L11.2499 8.75002M11.6667 10C11.6667 10.9205 10.9205 11.6667 10 11.6667C9.07955 11.6667 8.33335 10.9205 8.33335 10C8.33335 9.07955 9.07955 8.33335 10 8.33335C10.9205 8.33335 11.6667 9.07955 11.6667 10Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                 </g>
-                 <defs>
-                   <clipPath id="clip0_1_5117">
-                     <rect width="20" height="20" fill="white" />
-                   </clipPath>
-                 </defs>
-               </svg>
-               <p>4000</p>
-             </div>
-             <div  class="car-infos">
-               <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                 <ellipse cx="4.83332" cy="4.99998" rx="1.66667" ry="1.66667" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                 <ellipse cx="10.6667" cy="4.99998" rx="1.66667" ry="1.66667" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                 <ellipse cx="16.5" cy="4.99998" rx="1.66667" ry="1.66667" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                 <ellipse cx="4.83332" cy="15" rx="1.66667" ry="1.66667" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                 <ellipse cx="10.6667" cy="15" rx="1.66667" ry="1.66667" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                 <path d="M4.83332 6.66669V13.3334" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                 <path d="M10.6667 6.66669V13.3334" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                 <path d="M16.5 6.66669V8.33335C16.5 9.25383 15.7538 10 14.8333 10H4.83331" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-               </svg>
-               <p>Auto</p>
-             </div>
-             <div  class="car-infos">
-               <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                 <path d="M18.6666 17.5V15.8333C18.6666 14.2801 17.6043 12.9751 16.1666 12.605M13.25 2.7423C14.4716 3.23679 15.3333 4.43443 15.3333 5.83333C15.3333 7.23224 14.4716 8.42988 13.25 8.92437M14.5 17.5C14.5 15.9469 14.5 15.1703 14.2462 14.5577C13.9079 13.741 13.259 13.092 12.4422 12.7537C11.8297 12.5 11.0531 12.5 9.49997 12.5H6.99997C5.44683 12.5 4.67026 12.5 4.05769 12.7537C3.24093 13.092 2.59202 13.741 2.2537 14.5577C1.99997 15.1703 1.99997 15.9469 1.99997 17.5M11.5833 5.83333C11.5833 7.67428 10.0909 9.16667 8.24997 9.16667C6.40902 9.16667 4.91664 7.67428 4.91664 5.83333C4.91664 3.99238 6.40902 2.5 8.24997 2.5C10.0909 2.5 11.5833 3.99238 11.5833 5.83333Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-               </svg>
-               <p>4 Person</p>
-             </div>
-             <div  class="car-infos">
-               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                 <path d="M11.6667 9.16667H12.5C13.4205 9.16667 14.1667 9.91286 14.1667 10.8333V13.3333C14.1667 14.0237 14.7263 14.5833 15.4167 14.5833C16.107 14.5833 16.6667 14.0237 16.6667 13.3333V7.5L14.1667 5" stroke="#0F0F0F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
-                 <path d="M3.33334 16.6666V4.99998C3.33334 4.07951 4.07954 3.33331 5.00001 3.33331H10C10.9205 3.33331 11.6667 4.07951 11.6667 4.99998V16.6666" stroke="#0F0F0F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
-                 <path d="M2.5 16.6667H12.5" stroke="#0F0F0F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
-                 <path d="M15 5.83331V6.66665C15 7.12688 15.3731 7.49998 15.8333 7.49998H16.6667" stroke="#0F0F0F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
-                 <path d="M3.33334 9.16667H11.6667" stroke="#0F0F0F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
-               </svg>
-               <p>Electric</p>
-             </div>
-           </div>
-           <button>Rent Now</button>
-         </div>
-       </div>';
-       }
-       ?>
-       
+        while ($row = mysqli_fetch_array($result)) {
+        ?>
+          <div class="car-collection-card">
+            <img src="<?php echo $row["image"] ?>" alt="car">
+            <div class="car-name-desc">
+
+              <p class="car-name"><?php echo $row["name"] ?></p>
+              <div class="car-price">
+                <h2><?php echo $row["price"] ?></h2><span>/day</span>
+              </div>
+              <div class="car-desc">
+                <div class="car-infos">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_5117)">
+                      <path d="M10 1.66669V3.75002M10 1.66669C5.39765 1.66669 1.66669 5.39765 1.66669 10M10 1.66669C14.6024 1.66669 18.3334 5.39765 18.3334 10M10 16.25V18.3334M10 18.3334C14.6024 18.3334 18.3334 14.6024 18.3334 10M10 18.3334C5.39765 18.3334 1.66669 14.6024 1.66669 10M3.75002 10H1.66669M18.3334 10H16.25M15.8987 15.8987L14.4206 14.4206M4.10138 15.8987L5.58098 14.4191M4.10138 4.16669L5.54842 5.61373M15.8987 4.16669L11.2499 8.75002M11.6667 10C11.6667 10.9205 10.9205 11.6667 10 11.6667C9.07955 11.6667 8.33335 10.9205 8.33335 10C8.33335 9.07955 9.07955 8.33335 10 8.33335C10.9205 8.33335 11.6667 9.07955 11.6667 10Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_5117">
+                        <rect width="20" height="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <p><?php echo $row["mileage"] ?></p>
+                </div>
+                <div class="car-infos">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="4.83332" cy="4.99998" rx="1.66667" ry="1.66667" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <ellipse cx="10.6667" cy="4.99998" rx="1.66667" ry="1.66667" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <ellipse cx="16.5" cy="4.99998" rx="1.66667" ry="1.66667" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <ellipse cx="4.83332" cy="15" rx="1.66667" ry="1.66667" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <ellipse cx="10.6667" cy="15" rx="1.66667" ry="1.66667" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4.83332 6.66669V13.3334" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M10.6667 6.66669V13.3334" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16.5 6.66669V8.33335C16.5 9.25383 15.7538 10 14.8333 10H4.83331" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <p><?php echo $row["transmission"] ?></p>
+                </div>
+                <div class="car-infos">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.6666 17.5V15.8333C18.6666 14.2801 17.6043 12.9751 16.1666 12.605M13.25 2.7423C14.4716 3.23679 15.3333 4.43443 15.3333 5.83333C15.3333 7.23224 14.4716 8.42988 13.25 8.92437M14.5 17.5C14.5 15.9469 14.5 15.1703 14.2462 14.5577C13.9079 13.741 13.259 13.092 12.4422 12.7537C11.8297 12.5 11.0531 12.5 9.49997 12.5H6.99997C5.44683 12.5 4.67026 12.5 4.05769 12.7537C3.24093 13.092 2.59202 13.741 2.2537 14.5577C1.99997 15.1703 1.99997 15.9469 1.99997 17.5M11.5833 5.83333C11.5833 7.67428 10.0909 9.16667 8.24997 9.16667C6.40902 9.16667 4.91664 7.67428 4.91664 5.83333C4.91664 3.99238 6.40902 2.5 8.24997 2.5C10.0909 2.5 11.5833 3.99238 11.5833 5.83333Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <p><?php echo $row["capacity"] ?> Person</p>
+                </div>
+                <div class="car-infos">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.6667 9.16667H12.5C13.4205 9.16667 14.1667 9.91286 14.1667 10.8333V13.3333C14.1667 14.0237 14.7263 14.5833 15.4167 14.5833C16.107 14.5833 16.6667 14.0237 16.6667 13.3333V7.5L14.1667 5" stroke="#0F0F0F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.33334 16.6666V4.99998C3.33334 4.07951 4.07954 3.33331 5.00001 3.33331H10C10.9205 3.33331 11.6667 4.07951 11.6667 4.99998V16.6666" stroke="#0F0F0F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M2.5 16.6667H12.5" stroke="#0F0F0F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M15 5.83331V6.66665C15 7.12688 15.3731 7.49998 15.8333 7.49998H16.6667" stroke="#0F0F0F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.33334 9.16667H11.6667" stroke="#0F0F0F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <p><?php echo $row["type"] ?></p>
+                </div>
+              </div>
+              <button>View Deal</button>
+            </div>
+          </div>
+        <?php
+        }
+        ?>
       </div>
       <div class="see-all-btn">
         <button>See all Cars</button>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 8H15M15 8L8 15M15 8L8 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1 8H15M15 8L8 15M15 8L8 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
 
       </div>
     </div>
   </section>
-<section class="how-it-works">
-  <div class="container">
-    <div class="heading">
-      <h1>How it works</h1>
-      <p>Renting a luxury car has never been easier. Our streamlined process makes it simple 
-        for you to book and confirm your vehicle of choice online</p>
+
+  <section class="how-it-works">
+    <div class="container">
+      <div class="heading">
+        <h1>How it works</h1>
+        <p>Renting a luxury car has never been easier. Our streamlined process makes it simple
+          for you to book and confirm your vehicle of choice online</p>
+      </div>
+      <div class="content-hero">
+        <div class="content">
+          <div class="browse">
+            <div class="icons">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 21L17.5001 17.5M20 11.5C20 16.1944 16.1944 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3C16.1944 3 20 6.80558 20 11.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="heads">
+              <h2>Browse and select</h2>
+              <p>Choose from our wide range of premium cars, select the pickup and return dates and locations that suit you best.</p>
+            </div>
+          </div>
+          <div class="book">
+            <div class="icons">
+              <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 9H1M19 11.5V7.8C19 6.11984 19 5.27976 18.673 4.63803C18.3854 4.07354 17.9265 3.6146 17.362 3.32698C16.7202 3 15.8802 3 14.2 3H5.8C4.11984 3 3.27976 3 2.63803 3.32698C2.07354 3.6146 1.6146 4.07354 1.32698 4.63803C1 5.27976 1 6.11984 1 7.8V16.2C1 17.8802 1 18.7202 1.32698 19.362C1.6146 19.9265 2.07354 20.3854 2.63803 20.673C3.27976 21 4.11984 21 5.8 21H10M14 1V5M6 1V5M12.5 18L14.5 20L19 15.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="heads">
+              <h2>Book and confirm</h2>
+              <p>Book your desired car with just a few clicks and receive an instant confirmation via email or SMS.</p>
+            </div>
+          </div>
+          <div class="ride">
+            <div class="icons">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 8H14.01M8 8H8.01M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11ZM14.5 8C14.5 8.27614 14.2761 8.5 14 8.5C13.7239 8.5 13.5 8.27614 13.5 8C13.5 7.72386 13.7239 7.5 14 7.5C14.2761 7.5 14.5 7.72386 14.5 8ZM8.5 8C8.5 8.27614 8.27614 8.5 8 8.5C7.72386 8.5 7.5 8.27614 7.5 8C7.5 7.72386 7.72386 7.5 8 7.5C8.27614 7.5 8.5 7.72386 8.5 8ZM11 16.5C13.5005 16.5 15.5 14.667 15.5 13H6.5C6.5 14.667 8.4995 16.5 11 16.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="heads">
+              <h2>Enjoy your ride</h2>
+              <p>Pick up your car at the designated location and enjoy your premium driving experience with our top-quality service.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero">
+          <img src="public/images/how-it-work-hero.png" alt="">
+
+        </div>
+      </div>
     </div>
-    <div class="content-hero">
-     <div class="content">
-        <div class="browse">
-          <div class="icons">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 21L17.5001 17.5M20 11.5C20 16.1944 16.1944 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3C16.1944 3 20 6.80558 20 11.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="heads">
-            <h2>Browse and select</h2>
-            <p>Choose from our wide range of premium cars, select the pickup and return dates and locations that suit you best.</p>
-          </div>
-        </div>
-        <div class="book">
-          <div class="icons">
-            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <path d="M19 9H1M19 11.5V7.8C19 6.11984 19 5.27976 18.673 4.63803C18.3854 4.07354 17.9265 3.6146 17.362 3.32698C16.7202 3 15.8802 3 14.2 3H5.8C4.11984 3 3.27976 3 2.63803 3.32698C2.07354 3.6146 1.6146 4.07354 1.32698 4.63803C1 5.27976 1 6.11984 1 7.8V16.2C1 17.8802 1 18.7202 1.32698 19.362C1.6146 19.9265 2.07354 20.3854 2.63803 20.673C3.27976 21 4.11984 21 5.8 21H10M14 1V5M6 1V5M12.5 18L14.5 20L19 15.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-         <div class="heads">
-           <h2>Book and confirm</h2>
-           <p>Book your desired car with just a few clicks and receive an instant confirmation via email or SMS.</p>
-         </div>
-        </div>
-        <div class="ride">
-          <div class="icons">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <path d="M14 8H14.01M8 8H8.01M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11ZM14.5 8C14.5 8.27614 14.2761 8.5 14 8.5C13.7239 8.5 13.5 8.27614 13.5 8C13.5 7.72386 13.7239 7.5 14 7.5C14.2761 7.5 14.5 7.72386 14.5 8ZM8.5 8C8.5 8.27614 8.27614 8.5 8 8.5C7.72386 8.5 7.5 8.27614 7.5 8C7.5 7.72386 7.72386 7.5 8 7.5C8.27614 7.5 8.5 7.72386 8.5 8ZM11 16.5C13.5005 16.5 15.5 14.667 15.5 13H6.5C6.5 14.667 8.4995 16.5 11 16.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-           </svg>
-          </div>
-        <div class="heads">
-          <h2>Enjoy your ride</h2>
-          <p>Pick up your car at the designated location and enjoy your premium driving experience with our top-quality service.</p>
-        </div>
-        </div>
-     </div>
-     <div class="hero">
-   <img src="public/images/how-it-work-hero.png" alt="">
-  
-     </div>
-    </div>
-  </div>
   </section>
-<section class="customer">
+
+  <section class="customer">
     <div class="customer-saying">
-        <h1>What Our Customers Say</h1>
-        <div class="swipe-btns">
-            <button class="arrow-left"> <i data-feather="arrow-left"></i></button>
-            <button class="arrow-right"> <i data-feather="arrow-right"></i></button>
-        </div>
+      <h1>What Our Customers Say</h1>
+      <div class="swipe-btns">
+        <button class="arrow-left"> <i data-feather="arrow-left"></i></button>
+        <button class="arrow-right"> <i data-feather="arrow-right"></i></button>
+      </div>
     </div>
     <div class="customer-cards">
-        <?php foreach ($customers as $customer): ?>
+      <?php foreach ($customers as $customer) : ?>
         <div class="customer-card">
-            <p><?= $customer['testimonial'] ?></p>
-            <div class="user">
-                <img src="<?= $customer['image'] ?>" alt="customer">
-                <div class="user-name">
-                    <h2><?= $customer['name'] ?></h2>
-                    <p>From <span><?= $customer['location'] ?></span></p>
-                </div>
+          <p><?= $customer['testimonial'] ?></p>
+          <div class="user">
+            <img src="<?= $customer['image'] ?>" alt="customer">
+            <div class="user-name">
+              <h2><?= $customer['name'] ?></h2>
+              <p>From <span><?= $customer['location'] ?></span></p>
             </div>
+          </div>
         </div>
-        <?php endforeach; ?>
+      <?php endforeach; ?>
     </div>
-</section>
+  </section>
+
   <section class="footer">
     <div class="logo">
       <h1>LuxeDrive</h1>
-     </div>
+    </div>
     <div class="items">
       <p>Rent</p>
       <p>Share</p>
@@ -346,7 +344,9 @@ $customers = array(
       <i data-feather="facebook"></i>
       <i data-feather="youtube"></i>
     </div>
- </section>
+  </section>
+
+
   <script src="public/js/nav.js">
 
   </script>
@@ -355,28 +355,29 @@ $customers = array(
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const customerCards = document.querySelector('.customer-cards');
-        const arrowLeft = document.querySelector('.arrow-left');
-        const arrowRight = document.querySelector('.arrow-right');
-        const cardWidth = document.querySelector('.customer-card').offsetWidth;
-        let currentIndex = 0;
+      const customerCards = document.querySelector('.customer-cards');
+      const arrowLeft = document.querySelector('.arrow-left');
+      const arrowRight = document.querySelector('.arrow-right');
+      const cardWidth = document.querySelector('.customer-card').offsetWidth;
+      let currentIndex = 0;
 
-        arrowLeft.addEventListener('click', function() {
-            currentIndex = Math.max(currentIndex - 1, 0);
-            updateSliderPosition();
-        });
+      arrowLeft.addEventListener('click', function() {
+        currentIndex = Math.max(currentIndex - 1, 0);
+        updateSliderPosition();
+      });
 
-        arrowRight.addEventListener('click', function() {
-            currentIndex = Math.min(currentIndex + 1, customerCards.children.length - 1);
-            updateSliderPosition();
-        });
+      arrowRight.addEventListener('click', function() {
+        currentIndex = Math.min(currentIndex + 1, customerCards.children.length - 1);
+        updateSliderPosition();
+      });
 
-        function updateSliderPosition() {
-            customerCards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-        }
+      function updateSliderPosition() {
+        customerCards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      }
     });
-</script>
+  </script>
 
+  t
 </body>
 
 </html>

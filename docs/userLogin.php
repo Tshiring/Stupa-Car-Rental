@@ -5,17 +5,7 @@ if (isset($_SESSION["user"])) {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Stupa Car Rental</title>
-	<base href="http://localhost/Car/">
-
-	<link rel="stylesheet" href="public/styles/main.min.css">
-</head>
+<?php require '../components/head.php' ?>
 
 <body>
 	<?php
@@ -30,7 +20,7 @@ if (isset($_SESSION["user"])) {
 			if (password_verify($password, $user["password"])) {
 				session_start();
 				$_SESSION["user"] = "yes";
-				header("Location: dashboard.php");
+				header("Location: organization/car.php");
 				die();
 			} else {
 				echo "<div>Password doesn't match!</div>";

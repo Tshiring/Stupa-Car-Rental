@@ -1,63 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Rental Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
-</head>
+<?php
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location: login.php");
+    exit();
+}
+
+include '../database.php';
+
+if (isset($_POST["add"])) {
+    if (isset($_FILES['car-image']) && $_FILES['car-image']['error'] == UPLOAD_ERR_OK) {
+        $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/Car/uploads/'; // Use root directory path
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0755, true); // Create directory if it doesn't exist
+        }
+        $uploadFile = $uploadDir . basename($_FILES['car-image']['name']);
+
+        // Move the uploaded file to the specified directory
+        if (move_uploaded_file($_FILES['car-image']['tmp_name'], $uploadFile)) {
+            $imagePath = mysqli_real_escape_string($conn, 'uploads/' . basename($_FILES['car-image']['name']));
+        } else {
+            echo "Error uploading file.";
+            exit();
+        }
+    } else {
+        $imagePath = null;
+    }
+
+    $name = mysqli_real_escape_string($conn, $_POST["car-name"]);
+    $price = mysqli_real_escape_string($conn, $_POST["car-price"]);
+    $mileage = mysqli_real_escape_string($conn, $_POST["car-mileage"]);
+    $transmission = mysqli_real_escape_string($conn, $_POST["car-transmission"]);
+    $capacity = (int)$_POST["car-capacity"];
+    $type = mysqli_real_escape_string($conn, $_POST["vehicle-type"]);
+
+    $sql = "INSERT INTO cars (image, name, price, mileage, transmission, capacity, type) VALUES ('$imagePath', '$name', '$price', '$mileage', '$transmission', $capacity, '$type')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+}
+?>
+
+<?php require '../components/head.php'; ?>
+
 <body>
     <div class="container">
-        <div class="sidebar">
-            <h2>Dashboard</h2>
-            <ul>
-                <li><a href="#add-car">Add Car</a></li>
-                <li><a href="#available-cars">Available Cars</a></li>
-                <li><a href="#rental-records">Rental Records</a></li>
-            </ul>
-        </div>
+        <?php require './sidebar.php'; ?>
         <div class="main-content">
-            <h1>Car Rental Dashboard</h1>
-            
+            <h1>Add Car</h1>
             <div id="add-car" class="car-form">
                 <h2>Add a New Car</h2>
-                <form id="car-form">
+                <form id="car-form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data">
                     <label for="car-image">Upload Car Image:</label>
                     <input type="file" id="car-image" name="car-image" accept="image/*">
-                    
+
                     <label for="car-name">Car Name:</label>
                     <input type="text" id="car-name" name="car-name">
-                    
+
                     <label for="car-price">Price:</label>
                     <input type="text" id="car-price" name="car-price">
-                    
+
                     <label for="car-mileage">Mileage:</label>
                     <input type="text" id="car-mileage" name="car-mileage">
-                    
+
                     <label for="car-transmission">Transmission:</label>
-                    <input type="text" id="car-transmission" name="car-transmission">
-                    
-                    <label for="car-people">People Capacity:</label>
-                    <input type="text" id="car-people" name="car-people">
-                    
-                    <label for="car-electric">Electric:</label>
-                    <input type="text" id="car-electric" name="car-electric">
-                    
-                    <button type="submit">Add Car</button>
+                    <select id="car-transmission" name="car-transmission">
+                        <option value="">Select Transmission</option>
+                        <option value="auto">Auto</option>
+                        <option value="manual">Manual</option>
+                    </select>
+
+                    <label for="car-capacity">People Capacity:</label>
+                    <input type="number" id="car-capacity" name="car-capacity">
+
+                    <label for="vehicle-type">Type of Vehicle:</label>
+                    <select id="vehicle-type" name="vehicle-type">
+                        <option value="">Select Type of Vehicle</option>
+                        <option value="electric">Electric</option>
+                        <option value="fuel">Fuel</option>
+                    </select>
+
+                    <button type="submit" name="add">Add Car</button>
                 </form>
-            </div>
-            
-            <div id="available-cars" class="car-grid">
-                <!-- Dynamic car items will be appended here -->
-            </div>
-            
-            <div id="rental-records" class="rental-records">
-                <h2>Rental Records</h2>
-                <p>No rental records available</p>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
