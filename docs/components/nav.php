@@ -13,12 +13,16 @@
     </ul>
   </nav>
   <div class="login-btn">
-    <?php if (isset($_SESSION["user"])) : ?>
-      <a href="docs/organization/car.php">Dashboard</a>
+    <?php if (isset($_SESSION["user_type"])) : ?>
+      <?php if ($_SESSION["user_type"] == 'user') : ?>
+        <a href="docs/user/index.php">Dashboard</a>
+      <?php elseif ($_SESSION["user_type"] == 'organization') : ?>
+        <a href="docs/organization/index.php">Dashboard</a>
+      <?php endif; ?>
     <?php else : ?>
-      <a href="docs/userLogin.php">Login </a>
-      <a href="docs/Register.php"> / Register</a>
+      <a href="docs/orgLogin.php">Login as Organization</a>
+      <a href="docs/userLogin.php"> / Login </a>
+      <a href="docs/userRegister.php"> / Register</a>
     <?php endif; ?>
   </div>
-
 </header>

@@ -12,6 +12,12 @@
       color: $light-black;
       margin-bottom: 10px;
     }
+    p{
+      color: #000;
+      a{
+        color: blue;
+      }
+    }
     form {
       display: flex;
       flex-direction: column;

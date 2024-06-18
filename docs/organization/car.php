@@ -1,7 +1,8 @@
 <?php
 session_start();
-if (!isset($_SESSION["user"])) {
-  header("Location: userLogin.php");
+
+if (!isset($_SESSION["org"]) || $_SESSION["user_type"] != 'organization') {
+  header("Location: ../403.php");
   exit();
 }
 
