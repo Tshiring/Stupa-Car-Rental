@@ -23,6 +23,7 @@ img {
 
 button {
 	all: unset;
+	cursor: pointer;
 }
 
 li {
@@ -83,10 +84,19 @@ option {
 	}
 }
 
-.pill-button {
-	background-color: #000;
-	color: #fff;
-	padding: 16px 24px;
+.black-btn,
+.white-btn {
+	padding: 16px 40px;
 	border-radius: 64px;
 	height: min-content;
+}
+
+.black-btn {
+	background-color: #000;
+	color: #fff;
+}
+
+.white-btn {
+	background-color: #fff;
+	color: #000;
 }

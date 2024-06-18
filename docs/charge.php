@@ -22,7 +22,7 @@ $carPrice = $_POST['car_price'] ?? 0; // Price should be in cents
 
 $checkout_session = \Stripe\Checkout\Session::create([
   "mode" => "payment",
-  "success_url" => "http://localhost/success.php",
+  "success_url" => "http://localhost/Car/docs/success.php",
   "cancel_url" => "http://localhost/Car/docs/booking.php",
   "locale" => "auto",
   "line_items" => [

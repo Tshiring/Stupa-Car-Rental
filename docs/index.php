@@ -4,32 +4,6 @@
 $date = date('Y-m-d');
 ?>
 
-<?php
-
-// Example array of customer data
-$customers = array(
-  array(
-    "name" => "Lokman Hossain",
-    "location" => "Texas",
-    "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
-    "image" => "public/images/customer-img.png"
-  ),
-  array(
-    "name" => "Lokman Hossain",
-    "location" => "Texas",
-    "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
-    "image" => "public/images/customer-img.png"
-  ),
-  array(
-    "name" => "Lokman Hossain",
-    "location" => "Texas",
-    "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
-    "image" => "public/images/customer-img.png"
-  ),
-  // Add more customer data as needed
-);
-?>
-
 <body>
   <?php require './components/nav.php' ?>
 
@@ -236,7 +210,7 @@ $customers = array(
                   <p><?php echo $row["type"] ?></p>
                 </div>
               </div>
-              <a href="docs/booking.php?id=<?php echo $row["id"] ?>">View Deal</a>
+              <a href="docs/booking.php?id=<?php echo $row["id"] ?>">Book Now</a>
             </div>
           </div>
         <?php
