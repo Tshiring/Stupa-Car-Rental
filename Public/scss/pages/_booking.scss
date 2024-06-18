@@ -1,7 +1,7 @@
 .booking {
-  h1{
-    margin: 40px 0 60px;
-  }
+	h1 {
+		margin: 40px 0 60px;
+	}
 	img {
 		max-width: 550px;
 		aspect-ratio: 16 / 9;
@@ -28,7 +28,7 @@
 			}
 		}
 		form {
-      margin-top: 60px;
+			margin-top: 60px;
 			h2 {
 				font-size: 28px;
 			}
@@ -38,9 +38,28 @@
 					font-size: 16px;
 				}
 			}
-      button{
-        margin-top: 20px;
-      }
+			button {
+				margin-top: 20px;
+			}
 		}
 	}
+}
+
+.success-page {
+	display: grid;
+	place-content: center;
+	height: 70dvh;
+	.gif {
+    margin-top: 40px;
+		width: 250px;
+		height: 270px;
+	}
+  a{
+    text-align: center;
+    margin-top: 50px;
+    background-color: white;
+    color: #000;
+    border-radius: 10px;
+    padding: 10px;
+  }
 }

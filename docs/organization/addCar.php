@@ -46,12 +46,11 @@ if (isset($_POST["add"])) {
 <?php require '../components/head.php'; ?>
 
 <body>
-    <div class="container">
+    <div class=" org-car">
         <?php require './sidebar.php'; ?>
         <div class="main-content">
-            <h1>Add Car</h1>
+            <h1>Add New Car</h1>
             <div id="add-car" class="car-form">
-                <h2>Add a New Car</h2>
                 <form id="car-form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data">
                     <label for="car-image">Upload Car Image:</label>
                     <input type="file" id="car-image" name="car-image" accept="image/*">
@@ -89,6 +88,9 @@ if (isset($_POST["add"])) {
     </div>
 
     <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
 </body>
 
 </html>

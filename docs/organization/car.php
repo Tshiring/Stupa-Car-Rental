@@ -16,7 +16,7 @@ $result = mysqli_query($conn, $sql);
 <?php require '../components/head.php'; ?>
 
 <body>
-  <div class="container">
+  <div class=" org-car">
     <?php require './sidebar.php'; ?>
     <div class="main-content">
       <h1>Cars List</h1>
@@ -67,6 +67,9 @@ $result = mysqli_query($conn, $sql);
   </div>
 
   <script src="script.js"></script>
+  <script>
+    feather.replace();
+  </script>
 </body>
 
 </html>

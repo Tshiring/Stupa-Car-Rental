@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <?php require './components/head.php' ?>
 
 <?php

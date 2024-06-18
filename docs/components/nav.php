@@ -13,8 +13,12 @@
     </ul>
   </nav>
   <div class="login-btn">
-    <a href="docs/userLogin.php">Login </a>
-    <a href="docs/Register.php"> / Register</a>
+    <?php if (isset($_SESSION["user"])) : ?>
+      <a href="docs/organization/car.php">Dashboard</a>
+    <?php else : ?>
+      <a href="docs/userLogin.php">Login </a>
+      <a href="docs/Register.php"> / Register</a>
+    <?php endif; ?>
   </div>
 
 </header>

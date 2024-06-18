@@ -84,6 +84,11 @@ option {
 	}
 }
 
+.btn{
+	padding: 7px 10px;
+	border-radius: 5px;
+}
+
 .black-btn,
 .white-btn {
 	padding: 16px 40px;
@@ -99,4 +104,14 @@ option {
 .white-btn {
 	background-color: #fff;
 	color: #000;
+}
+
+.btn-warning{
+	background-color: rgb(175, 175, 76);
+	color: #fff;
+}
+
+.btn-danger{
+	background-color: red;
+	color: #fff;
 }
