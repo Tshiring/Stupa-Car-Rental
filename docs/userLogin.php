@@ -5,7 +5,7 @@ if (isset($_SESSION["user"])) {
 }
 
 ?>
-<?php require '../components/head.php' ?>
+<?php require './components/head.php' ?>
 
 <body>
 	<?php
@@ -34,7 +34,7 @@ if (isset($_SESSION["user"])) {
 	<div class="form-wrapper">
 		<div class="auth-form">
 			<h2>Login</h2>
-			<form action="docs/login.php" method="post">
+			<form action="docs/userLogin.php" method="post">
 				<div class="form-group">
 					<label for="email">Email</label>
 					<input type="email" name="email" id="email" autocomplete="off" placeholder="Enter your email">
