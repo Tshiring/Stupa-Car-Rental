@@ -179,7 +179,7 @@ $customers = array(
       <div class="car-collection-wrapper">
         <?php
         include("./database.php");
-        $sql = "SELECT * FROM cars";
+        $sql = "SELECT * FROM cars LIMIT 6";
         $result = mysqli_query($conn, $sql);
 
         while ($row = mysqli_fetch_array($result)) {
@@ -236,7 +236,7 @@ $customers = array(
                   <p><?php echo $row["type"] ?></p>
                 </div>
               </div>
-              <button>View Deal</button>
+              <a href="docs/booking.php?id=<?php echo $row["id"] ?>">View Deal</a>
             </div>
           </div>
         <?php

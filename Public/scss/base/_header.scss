@@ -15,10 +15,10 @@ header {
 		display: flex;
 		flex-direction: column;
 		gap: 5px;
-		&:hover + nav{
-			opacity: 1;
-			visibility: visible;
-		}
+		// &:hover + nav{
+		// 	opacity: 1;
+		// 	visibility: visible;
+		// }
 		span {
 			display: block;
 			height: 5px;
@@ -28,21 +28,21 @@ header {
 		}
 	}
 	nav {
-		background-color: gray;
+		// background-color: gray;
 		padding: 10px;
 		border-radius: 10px;
-		position: absolute;
-		z-index: 1;
-		left: 0;
-		top: 60px;
-		opacity: 0;
-		visibility: hidden;
-		transition: all .4s ease-in-out;
-		
+		// position: absolute;
+		// z-index: 1;
+		// left: 0;
+		// top: 60px;
+		// opacity: 0;
+		// visibility: hidden;
+		// transition: all .4s ease-in-out;
+
 		ul {
 			display: flex;
-			flex-direction: column;
-			gap: 8px;
+			align-items: center;
+			gap: 20px;
 		}
 	}
 }

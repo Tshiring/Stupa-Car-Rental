@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Car</title>
 </head>
 
 <body>
@@ -24,14 +24,8 @@
     if ($result && mysqli_num_rows($result) > 0) {
       $row = mysqli_fetch_array($result);
   ?>
-      <form action="charge.php" method="post">
-        <p><?php echo $row['name'] ?></p>
-        <p>US$ <?php echo $row['price'] ?></p>
-        <input type="hidden" name="car_name" value="<?php echo $row['name'] ?>">
-        <input type="hidden" name="car_price" value="<?php echo $row['price'] * 100; // Convert to cents 
-                                                      ?>">
-        <button>Pay</button>
-      </form>
+      <h2>Title</h2>
+      <p><?php echo $row['name'] ?></p>
   <?php
     } else {
       echo "<p>No car found with the provided ID.</p>";

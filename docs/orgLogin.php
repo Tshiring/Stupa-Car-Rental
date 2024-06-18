@@ -34,7 +34,7 @@ if (isset($_SESSION["user"])) {
   <div class="form-wrapper">
     <div class="auth-form">
       <h2>Organization Login</h2>
-      <form action="docs/login.php" method="post">
+      <form action="docs/userLogin.php" method="post">
         <div class="form-group">
           <label for="org-name">Organization Name</label>
           <input type="org-name" name="org-name" id="org-name" autocomplete="off" placeholder="Enter your organization name">
