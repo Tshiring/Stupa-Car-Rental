@@ -5,7 +5,7 @@ if (isset($_SESSION["user"])) {
 }
 
 ?>
-<?php require '../components/head.php' ?>
+<?php require './components/head.php' ?>
 
 <body>
   <?php require './components/nav.php' ?>
@@ -57,16 +57,29 @@ if (isset($_SESSION["user"])) {
     }
   }
   ?>
-
+<div class="form-wrapper">
   <div class="auth-form">
     <form action="docs/register.php" method="POST">
-      <input type="text" name="full_name" id="">
-      <input type="email" name="email" id="">
-      <input type="password" name="password" id="">
-      <input type="password" name="confirmPassword" id="">
+      <div class="form-group">
+        <label for="full_name">Full Name</label>
+        <input type="text" autocomplete="off" name="full_name" id="full_name" placeholder="Enter your full name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" autocomplete="off" name="email" id="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" autocomplete="off"  name="password" id="password" placeholder="Enter your password">
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" autocomplete="off" name="confirmPassword" id="confirmPassword" placeholder="Enter your password again">
+      </div>
       <input type="submit" class="btn btn-primary" value="Register" name="submit">
     </form>
   </div>
+</div>
 </body>
 
 </html>

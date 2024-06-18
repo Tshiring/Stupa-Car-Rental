@@ -5,7 +5,7 @@ if (isset($_SESSION["user"])) {
 }
 
 ?>
-<?php require '../components/head.php' ?>
+<?php require './components/head.php' ?>
 
 <body>
   <?php
