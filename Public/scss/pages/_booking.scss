@@ -1,0 +1,65 @@
+.booking {
+	h1 {
+		margin: 40px 0 60px;
+	}
+	img {
+		max-width: 550px;
+		aspect-ratio: 16 / 9;
+		border-radius: 10px;
+	}
+	&__wrapper {
+		display: flex;
+		gap: 40px;
+		& > div {
+			width: 100%;
+		}
+		.car-desc {
+			padding: 20px;
+			border-radius: 5px;
+			background-color: rgb(26, 26, 26);
+			width: 50%;
+			display: flex;
+			justify-content: space-between;
+			.car-infos {
+				display: flex;
+				gap: 10px;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+		form {
+			margin-top: 60px;
+			h2 {
+				font-size: 28px;
+			}
+			p {
+				font-size: 24px;
+				span {
+					font-size: 16px;
+				}
+			}
+			button {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.success-page {
+	display: grid;
+	place-content: center;
+	height: 70dvh;
+	.gif {
+    margin-top: 40px;
+		width: 250px;
+		height: 270px;
+	}
+  a{
+    text-align: center;
+    margin-top: 50px;
+    background-color: white;
+    color: #000;
+    border-radius: 10px;
+    padding: 10px;
+  }
+}

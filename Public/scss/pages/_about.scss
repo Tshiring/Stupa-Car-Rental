@@ -1,0 +1,13 @@
+.about {
+	margin-top: 60px;
+	.form-wrapper {
+		margin-top: 40px;
+		height: auto;
+		place-content: start;
+		textarea {
+			width: 100%;
+			resize: none;
+			height: 60px;
+		}
+	}
+}

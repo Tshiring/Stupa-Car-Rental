@@ -1,7 +1,8 @@
 <?php
 session_start();
-if (isset($_SESSION["user"])) {
+if (isset($_SESSION["org"])) {
   header("Location: dashboard.php");
+  exit();
 }
 
 ?>
@@ -13,14 +14,15 @@ if (isset($_SESSION["user"])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
     require_once "database.php";
-    $sql = "SELECT * FROM  users WHERE email = '$email'";
+    $sql = "SELECT * FROM  orgusers WHERE email = '$email'";
     $result = mysqli_query($conn, $sql);
     $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
     if ($user) {
-      if (password_verify($password, $user["password"])) {
+      if (password_verify($password, $user["pass"])) {
         session_start();
-        $_SESSION["user"] = "yes";
-        header("Location: organization/car.php");
+        $_SESSION["org"] = $user["email"];
+        $_SESSION["user_type"] = "organization";
+        header("Location: organization/index.php");
         die();
       } else {
         echo "<div>Password doesn't match!</div>";
@@ -34,7 +36,7 @@ if (isset($_SESSION["user"])) {
   <div class="form-wrapper">
     <div class="auth-form">
       <h2>Organization Login</h2>
-      <form action="docs/login.php" method="post">
+      <form action="docs/orgLogin.php" method="post">
         <div class="form-group">
           <label for="org-name">Organization Name</label>
           <input type="org-name" name="org-name" id="org-name" autocomplete="off" placeholder="Enter your organization name">
@@ -47,6 +49,7 @@ if (isset($_SESSION["user"])) {
           <label for="password">Password</label>
           <input type="password" name="password" id="password" autocomplete="off" placeholder="Enter your password">
         </div>
+        <p>Want to register as organization? <a href="docs/orgRegister.php">Sign up</a></p>
         <input type="submit" value="Login" name="login">
       </form>
     </div>

@@ -57,29 +57,31 @@ if (isset($_SESSION["user"])) {
     }
   }
   ?>
-<div class="form-wrapper">
-  <div class="auth-form">
-    <form action="docs/register.php" method="POST">
-      <div class="form-group">
-        <label for="full_name">Full Name</label>
-        <input type="text" autocomplete="off" name="full_name" id="full_name" placeholder="Enter your full name">
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" autocomplete="off" name="email" id="email" placeholder="Enter your email">
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" autocomplete="off"  name="password" id="password" placeholder="Enter your password">
-      </div>
-      <div class="form-group">
-        <label for="confirmPassword">Confirm Password</label>
-        <input type="password" autocomplete="off" name="confirmPassword" id="confirmPassword" placeholder="Enter your password again">
-      </div>
-      <input type="submit" class="btn btn-primary" value="Register" name="submit">
-    </form>
+  <div class="form-wrapper">
+    <div class="auth-form">
+      <h2>Register</h2>
+      <form action="docs/userRegister.php" method="POST">
+        <div class="form-group">
+          <label for="full_name">Full Name</label>
+          <input type="text" autocomplete="off" name="full_name" id="full_name" placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" autocomplete="off" name="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" autocomplete="off" name="password" id="password" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" autocomplete="off" name="confirmPassword" id="confirmPassword" placeholder="Enter your password again">
+        </div>
+        <p>Already have an account? <a href="docs/userLogin.php">Sign in</a></p>
+        <input type="submit" class="btn btn-primary" value="Register" name="submit">
+      </form>
+    </div>
   </div>
-</div>
 </body>
 
 </html>

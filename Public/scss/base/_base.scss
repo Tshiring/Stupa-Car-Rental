@@ -23,6 +23,7 @@ img {
 
 button {
 	all: unset;
+	cursor: pointer;
 }
 
 li {
@@ -33,7 +34,8 @@ a {
 	text-decoration: none;
 }
 
-input {
+input,
+textarea {
 	border-radius: 6px;
 	padding: 8px 10px;
 	border: 1px solid white;
@@ -83,10 +85,34 @@ option {
 	}
 }
 
-.pill-button {
-	background-color: #000;
-	color: #fff;
-	padding: 16px 24px;
+.btn {
+	padding: 7px 10px;
+	border-radius: 5px;
+}
+
+.black-btn,
+.white-btn {
+	padding: 16px 40px;
 	border-radius: 64px;
 	height: min-content;
+}
+
+.black-btn {
+	background-color: #000;
+	color: #fff;
+}
+
+.white-btn {
+	background-color: #fff;
+	color: #000;
+}
+
+.btn-warning {
+	background-color: rgb(175, 175, 76);
+	color: #fff;
+}
+
+.btn-danger {
+	background-color: red;
+	color: #fff;
 }

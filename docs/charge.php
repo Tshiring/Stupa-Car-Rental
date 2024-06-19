@@ -16,9 +16,13 @@ if (!$stripeSecretKey) {
 
 \Stripe\Stripe::setApiKey($stripeSecretKey);
 
+// Get car details from the POST request
+$carName = $_POST['car_name'] ?? 'Unknown Car';
+$carPrice = $_POST['car_price'] ?? 0; // Price should be in cents
+
 $checkout_session = \Stripe\Checkout\Session::create([
   "mode" => "payment",
-  "success_url" => "http://localhost/success.php",
+  "success_url" => "http://localhost/Car/docs/success.php",
   "cancel_url" => "http://localhost/Car/docs/booking.php",
   "locale" => "auto",
   "line_items" => [
@@ -26,19 +30,9 @@ $checkout_session = \Stripe\Checkout\Session::create([
       "quantity" => 1,
       "price_data" => [
         "currency" => "usd",
-        "unit_amount" => 2000,
+        "unit_amount" => $carPrice,
         "product_data" => [
-          "name" => "T-shirt"
-        ]
-      ]
-    ],
-    [
-      "quantity" => 2,
-      "price_data" => [
-        "currency" => "usd",
-        "unit_amount" => 700,
-        "product_data" => [
-          "name" => "Hat"
+          "name" => $carName
         ]
       ]
     ]

@@ -1,33 +1,11 @@
+<?php
+session_start();
+?>
+
 <?php require './components/head.php' ?>
 
 <?php
 $date = date('Y-m-d');
-?>
-
-<?php
-
-// Example array of customer data
-$customers = array(
-  array(
-    "name" => "Lokman Hossain",
-    "location" => "Texas",
-    "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
-    "image" => "public/images/customer-img.png"
-  ),
-  array(
-    "name" => "Lokman Hossain",
-    "location" => "Texas",
-    "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
-    "image" => "public/images/customer-img.png"
-  ),
-  array(
-    "name" => "Lokman Hossain",
-    "location" => "Texas",
-    "testimonial" => "I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.",
-    "image" => "public/images/customer-img.png"
-  ),
-  // Add more customer data as needed
-);
 ?>
 
 <body>
@@ -179,7 +157,7 @@ $customers = array(
       <div class="car-collection-wrapper">
         <?php
         include("./database.php");
-        $sql = "SELECT * FROM cars";
+        $sql = "SELECT * FROM cars LIMIT 6";
         $result = mysqli_query($conn, $sql);
 
         while ($row = mysqli_fetch_array($result)) {
@@ -236,7 +214,7 @@ $customers = array(
                   <p><?php echo $row["type"] ?></p>
                 </div>
               </div>
-              <button>View Deal</button>
+              <a href="docs/booking.php?id=<?php echo $row["id"] ?>">Book Now</a>
             </div>
           </div>
         <?php
@@ -377,7 +355,6 @@ $customers = array(
     });
   </script>
 
-  t
 </body>
 
 </html>
