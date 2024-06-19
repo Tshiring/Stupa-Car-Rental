@@ -16,7 +16,7 @@ $date = date('Y-m-d');
       <h1>Discover the world on wheels with our car rental service</h1>
       <img src="public/images/hero.png" alt="">
     </div>
-    <form action="">
+    <!-- <form action="">
       <div class="form-control">
         <label for="">Pick-up Location</label>
         <input type="search" placeholder="Search a location">
@@ -34,7 +34,7 @@ $date = date('Y-m-d');
         <input type="date" value="<?php echo $date; ?>">
       </div>
       <button type="submit">Find a Vehicle</button>
-    </form>
+    </form> -->
   </section>
 
   <section class="body-type">
