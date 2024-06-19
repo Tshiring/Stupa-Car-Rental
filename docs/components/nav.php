@@ -7,8 +7,8 @@
   <nav>
     <ul>
       <li><a href="">Home</a></li>
-      <li><a href="">About</a></li>
-      <li><a href="">Contact</a></li>
+      <li><a href="about.php">About</a></li>
+      <li><a href="contact.php">Contact</a></li>
     </ul>
   </nav>
   <h1>LOGO</h1>
