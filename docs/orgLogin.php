@@ -11,6 +11,7 @@ if (isset($_SESSION["org"])) {
 <body>
   <?php
   if (isset($_POST["login"])) {
+    $orgName = $_POST["org-name"];
     $email = $_POST["email"];
     $password = $_POST["password"];
     require_once "database.php";
@@ -21,6 +22,7 @@ if (isset($_SESSION["org"])) {
       if (password_verify($password, $user["pass"])) {
         session_start();
         $_SESSION["org"] = $user["email"];
+        $_SESSION["org_name"] = $user["name"];
         $_SESSION["user_type"] = "organization";
         header("Location: organization/index.php");
         die();
