@@ -34,7 +34,8 @@ a {
 	text-decoration: none;
 }
 
-input {
+input,
+textarea {
 	border-radius: 6px;
 	padding: 8px 10px;
 	border: 1px solid white;
@@ -84,7 +85,7 @@ option {
 	}
 }
 
-.btn{
+.btn {
 	padding: 7px 10px;
 	border-radius: 5px;
 }
@@ -106,12 +107,12 @@ option {
 	color: #000;
 }
 
-.btn-warning{
+.btn-warning {
 	background-color: rgb(175, 175, 76);
 	color: #fff;
 }
 
-.btn-danger{
+.btn-danger {
 	background-color: red;
 	color: #fff;
 }

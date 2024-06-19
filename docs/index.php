@@ -355,7 +355,6 @@ $date = date('Y-m-d');
     });
   </script>
 
-  t
 </body>
 
 </html>
