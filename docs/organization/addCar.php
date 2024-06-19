@@ -37,6 +37,7 @@ if (isset($_POST["add"])) {
 
     if (mysqli_query($conn, $sql)) {
         echo "New record created successfully";
+        header("Location:./car.php");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }

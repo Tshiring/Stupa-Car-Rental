@@ -52,7 +52,7 @@ $result = mysqli_query($conn, $sql);
                 <td><?php echo $row["capacity"]; ?></td>
                 <td><?php echo $row["type"]; ?></td>
                 <td>
-                  <a href="editCar.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">Edit</a>
+                  <a href="docs/organization/editCar.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">Edit</a>
                   <a href="deleteCar.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
                 </td>
               </tr>
