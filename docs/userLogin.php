@@ -43,7 +43,7 @@ if (isset($_SESSION["user"])) {
 					<label for="password">Password</label>
 					<input type="password" name="password" id="password" autocomplete="off" placeholder="Enter your password">
 				</div>
-				<input type="submit" value="Login" name="login">
+			<input type="submit" value="Login" name="login">
 			</form>
 		</div>
 	</div>
